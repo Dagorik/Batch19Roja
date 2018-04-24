@@ -44,3 +44,12 @@ createUser("PRUEBA","prueba2","ESTA ES UNA PRUEBA",21)
     })
     .then(modifyUser => console.log(modifyUser))
     .catch(err => console.log(err))
+
+
+    createUser("PRUEBA","prueba2","ESTA ES UNA PRUEBA",21)
+    .then(user => {
+        console.log("---->",user)
+        patchUser(user.id,45).then(modifyUser => console.log(modifyUser))
+        .catch(err => console.log(err))
+    })
+    .catch(err => console.log(err))
