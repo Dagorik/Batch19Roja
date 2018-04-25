@@ -2,7 +2,7 @@
   "name": "batch19",
   "version": "1.0.1",
   "description": "Este es el proyecto del Batch19 cita roja",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/Dagorik/Batch19Roja#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "4.16.3",
+    "mongoose": "^5.0.16",
     "request": "2.85.0"
   }
 }
