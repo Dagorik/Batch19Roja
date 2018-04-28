@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/Dagorik/Batch19Roja#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "1.18.2",
     "express": "4.16.3",
-    "mongoose": "^5.0.16",
+    "mongoose": "5.0.16",
     "request": "2.85.0"
   }
 }

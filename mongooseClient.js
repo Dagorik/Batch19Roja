@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 mongoose.connect('mongodb://prueba:123456@ds259079.mlab.com:59079/cinta-roja');
 
 const Schema = mongoose.Schema,
@@ -8,14 +8,11 @@ const alumnoSchema = new Schema({
     alumno:ObjectId,
     name: String,
     last_name: String,
+    age: Number,
     email: String,
-    phone: String,
-    city: String,
-},{
-    versionKey: false
+    city: String
 });
 
-
-var Alumno = mongoose.model('Alumno', alumnoSchema);
+var Alumno = mongoose.model('Alumno',alumnoSchema);
 
 module.exports = Alumno;
