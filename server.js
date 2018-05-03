@@ -5,6 +5,16 @@ const Alumno = require('./mongooseClient')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+/*
+Estan en un papeleria
+Document: Items
+Hacer el CRUD completo para items
+Crear una peticion POST para realizar compras y generar
+una 
+factura: Precio unitario, IVA, Precio con IVA
+*/
+
 //Create students
 app.post('/api/v1/user/create',(req,res)=>{
     const {name,last_name,age} = req.body
@@ -64,10 +74,9 @@ app.get('/api/v1/find',(req,res)=>{
 
 app.put('/user/:uid', (req,res) => {
     const {uid} = req.params
-    Alumno.findByIdAndUpdate(uid,{$set:req.body}).exec().then(
-        (alumno) => res.send(alumno)
-    ).catch(
-        (err) =>  res.send(err)
+    Alumno.findByIdAndUpdate(uid,{$set:req.body}).exec()
+    .then((alumno) => res.send(alumno)
+    ).catch((err) =>  res.send(err)
     )
 })
 
