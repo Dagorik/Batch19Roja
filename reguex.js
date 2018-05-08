@@ -3,4 +3,5 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
-validateEmail("devf@devf.mx")
+var isEmail = validateEmail("devf@asd.sw")
+console.log(isEmail)
